@@ -1,6 +1,6 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+import { UserApp } from './src/users/users-app'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -18,4 +18,4 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 
-setupCounter(document.querySelector('.card'))
+UserApp(document.querySelector('.card'))
