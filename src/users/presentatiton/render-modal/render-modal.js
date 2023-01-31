@@ -1,11 +1,12 @@
 import './render-modal.css';
 import modalHtml from './render-modal.html?raw'
-let modal,form;
+let modal, form;
 export const showModal = () => {
     modal?.classList.remove('hide-modal');
 }
 export const hideModal = () => {
     modal?.classList.add('hide-modal');
+    form?.reset();
 }
 /**
  * 
@@ -24,8 +25,22 @@ export const renderModal = (element) => {
         hideModal();
     });
 
-    form.addEventListener('submit', (event) =>{
+    form.addEventListener('submit', (event) => {
         event.preventDefault();
+        const formData = new FormData(form);
+        const userLike = {}
+        for (const [key, value] of formData) {
+            if (key == 'balance') {
+                userLike[key] = +value;
+                continue;
+            }
+            if (key == 'isActive') {
+                userLike[key] = (value === 'on') ? true : false;
+                continue;
+            }
+            userLike[key] = value;
+        }
+        hideModal();
     });
 
     element.append(modal);
