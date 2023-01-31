@@ -431,45 +431,6 @@
       "first_name": "Rosemary",
       "last_name": "Foreman",
       "gender": "female"
-    },
-    {
-      "id": 49,
-      "isActive": true,
-      "balance": 2841.02,
-      "avatar": "http://placehold.it/32x32",
-      "first_name": "Dianna",
-      "last_name": "Bowman",
-      "gender": "female"
-    },
-    {
-      "id": 50,
-      "isActive": true,
-      "balance": 1174.43,
-      "avatar": "http://placehold.it/32x32",
-      "first_name": "Mcbride",
-      "last_name": "Woodward",
-      "gender": "male"
-    },
-    {
-      "balance": 2000,
-      "first_name": "Mariana",
-      "isActive": true,
-      "last_name": "Garcia",
-      "id": 51
-    },
-    {
-      "balance": 567,
-      "first_name": "uiyu",
-      "isActive": "true",
-      "last_name": "uiyi",
-      "id": 52
-    },
-    {
-      "balance": 4,
-      "first_name": "uiyu",
-      "isActive": false,
-      "last_name": "uiyi",
-      "id": 53
     }
   ]
 }
