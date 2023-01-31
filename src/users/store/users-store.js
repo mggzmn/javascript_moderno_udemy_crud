@@ -11,14 +11,28 @@ const loadNextPage = async () => {
     state.users = users;
 }
 const loadPreviousPage = async () => {
-    
+
     if (state.currentPage == 1) return;
     const users = await loadUsersByPage(state.currentPage - 1);
     state.currentPage -= 1;
     state.users = users;
 }
-const onUserChanged = () => {
-    throw new Error("No implementado")
+/**
+ * 
+ * @param {User} updatedUser 
+ */
+const onUserChanged = (updatedUser) => {
+    let wasFound = false;
+    state.users = state.users.map(user => {
+        if (user.id === updatedUser.id) {
+            wasFound = true;
+            return updatedUser
+        }
+        return user
+    });
+    if (state.users.length < 10 && !wasFound) {
+        state.users.push(updatedUser)
+    }
 }
 const reloadPage = async () => {
     throw new Error("No implementado")
